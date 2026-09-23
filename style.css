@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #05070d;
+  color: #eeeeee;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+
+/* Cada nodo ocupa toda la pantalla */
+
+.pantalla {
+  min-height: 100vh;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+
+
+  .imagen {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 25px auto;
+  border: 2px solid #e50914;
+  box-shadow: 0 0 20px #e50914;
+}
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(100, 0, 0, 0.25),
+      transparent 50%
+    ),
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.9)
+    );
+}
+
+/* Mostrar el nodo elegido */
+
+.pantalla:target {
+  display: flex;
+}
+
+/* Mostrar el inicio cuando no hay ningún # */
+
+body:not(:has(.pantalla:target)) #inicio {
+  display: flex;
+}
+
+
+/* =========================
+   TARJETA
+   ========================= */
+
+.contenido {
+  width: 90%;
+  max-width: 650px;
+
+  padding: 45px;
+
+  background: rgba(5, 8, 15, 0.94);
+
+  border: 2px solid #e50914;
+
+  box-shadow:
+    0 0 10px #e50914,
+    0 0 30px rgba(229, 9, 20, 0.4),
+    inset 0 0 25px rgba(229, 9, 20, 0.08);
+
+  text-align: center;
+
+  position: relative;
+}
+.gif {
+  display: block;
+  width: 400px;
+  max-width: 90%;
+  height: auto;
+  margin: 25px auto;
+  border: 2px solid #e50914;
+  box-shadow: 0 0 20px #e50914;
+}
+
+/* =========================
+   TÍTULOS
+   ========================= */
+
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+
+  color: #e50914;
+
+  text-transform: uppercase;
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 5px #e50914,
+    0 0 15px #e50914,
+    0 0 30px rgba(229, 9, 20, 0.6);
+}
+
+h1 {
+  font-size: 65px;
+
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+h2 {
+  font-size: 38px;
+
+  margin-top: 0;
+}
+
+
+/* =========================
+   TEXTO
+   ========================= */
+
+p {
+  font-family: "Roboto", Arial, sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 300;
+
+  line-height: 1.7;
+
+  color: #dddddd;
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.boton {
+  display: block;
+
+  margin: 18px auto;
+
+  padding: 15px 25px;
+
+  max-width: 450px;
+
+  color: white;
+
+  background-color: transparent;
+
+  border: 1px solid #e50914;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  font-family: "Roboto", Arial, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s;
+}
+
+
+/* Efecto cuando pasás el mouse */
+
+.boton:hover {
+  background-color: #e50914;
+
+  color: white;
+
+  box-shadow:
+    0 0 10px #e50914,
+    0 0 25px #e50914,
+    0 0 40px rgba(229, 9, 20, 0.5);
+
+  transform: scale(1.03);
+}
+
+
+/* =========================
+   BOTÓN VOLVER
+   ========================= */
+
+.volver {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  color: #999999;
+
+  text-decoration: none;
+
+  font-family: "Roboto", Arial, sans-serif;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+.volver:hover {
+  color: #e50914;
+
+  text-shadow: 0 0 8px #e50914;
+}
+
+
+/* =========================
+   FINALES
+   ========================= */
+
+.final {
+  border-color: #ff1b1b;
+
+  box-shadow:
+    0 0 15px #ff1b1b,
+    0 0 50px rgba(255, 0, 0, 0.5);
+}
+
+
+/* Título de los finales */
+
+.final h2 {
+  font-size: 42px;
+}
+
+
+/* =========================
+   ADAPTACIÓN PARA CELULAR
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .contenido {
+    width: 95%;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .boton {
+    font-size: 12px;
+  }
+}
